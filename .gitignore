@@ -1,0 +1,8 @@
+# Data files (too large for GitHub)
+data/
+*.osm.pbf
+*.osm
+*.zip
+*.mapdb
+__pycache__/
+*.pyc

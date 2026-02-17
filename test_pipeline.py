@@ -94,7 +94,7 @@ try:
     print("  OK - Transport network built successfully!")
     
     # Quick travel time test with a small subset
-    from r5py import TravelTimeMatrixComputer
+    from r5py import TravelTimeMatrix
     
     sample = centroids.head(5).copy()
     sample = sample.rename(columns={"DAUID": "id"})
@@ -102,7 +102,7 @@ try:
     departure_time = datetime.datetime(2026, 3, 4, 8, 0, 0)
     
     print(f"  Computing sample travel times (5 origins -> 5 destinations)...")
-    ttmc = TravelTimeMatrixComputer(
+    tt_matrix = TravelTimeMatrix(
         network,
         origins=sample,
         destinations=sample,
@@ -110,7 +110,7 @@ try:
         departure_time_window=datetime.timedelta(minutes=10),
         max_time=datetime.timedelta(minutes=60),
     )
-    tt_matrix = ttmc.compute_travel_times()
+        ).compute_travel_times()
     print(f"  OK - Got {len(tt_matrix)} travel time pairs")
     print(f"  Sample results:")
     print(tt_matrix.head(10).to_string(index=False))
