@@ -1,6 +1,6 @@
 setuptools
 geopandas>=0.14.0
-pandas==2.0.3
+pandas>=2.2.0
 pyarrow
 pyyaml
 r5py
