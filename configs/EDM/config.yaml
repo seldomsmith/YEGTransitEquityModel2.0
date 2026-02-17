@@ -1,0 +1,25 @@
+# Edmonton Region Configuration
+name: Edmonton
+code: EDM
+
+# Paths to spatial data
+# These paths are relative to the project root
+gpkg: data/EDM/region/region.gpkg # Updated to actual generated file
+centroids_gpkg: data/EDM/region/centroids.gpkg # Separate centroids file
+
+# Paths to network data
+gtfs: data/EDM/gtfs # Contains ETS.zip
+osm: data/EDM/osm/edmonton.osm.pbf # Alberta OSM extract
+
+# Paths to demographic and supply data
+# NOTE: Currently using PLACEHOLDER data - replace with real 2021 Census data
+demographics: data/EDM/raw/demographics.csv # PLACEHOLDER - generated dummy data
+supply: data/EDM/raw/supply.csv # PLACEHOLDER - generated dummy data
+
+
+# Fare analysis parameters (optional - can be added later)
+# fare_threshold: 3.50
+# fare:
+#   2024:
+#     full: data/EDM/fare/2024-full.parquet
+#     limited: data/EDM/fare/2024-limited.parquet

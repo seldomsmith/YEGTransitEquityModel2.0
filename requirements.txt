@@ -1,0 +1,7 @@
+setuptools
+geopandas>=0.14.0
+pandas==2.0.3
+pyarrow
+pyyaml
+r5py
+python-slugify
